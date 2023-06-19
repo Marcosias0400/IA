@@ -1,0 +1,45 @@
+#******************************************
+"""
+Instituto Politecnico Nacional
+Escuela Superior de Fisica y Matematicas
+Licenciatura de Matematica Algoritmica
+Fundamentos de Inteligencia Artificial
+Editor: Ortiz Ortiz Bosco
+Titulo: Instalacion de Torch par python
+"""
+Instalacion
+https://pytorch.org/get-started/locally/
+#------------------------------------------
+# Selecciona un Sistema Operativo
+selecciona: Mac
+selecciona: conda
+selecciona Python>=3.7
+
+Si se quiere soporte de Nvidia para windows o linux entonces:
+--> >select Cuda version 10.1
+
+Instala Cuda Toolkit
+Entorno de desarrollo para computo de alto desempenyo en aplicaciones aceleradas por GPU
+Necesitas una tarjeta de video NVIDIA en la maquina:
+
+https://developer.nvidia.com/cuda-downloads
+
+Versiones Legacy 
+10.1 update 2
+select OS (e.g. Windows 10)
+Descarga e instala
+
+# Crea un entrono en conda para python>=3.7
+conda activate pytorch
+
+# Instala pytorch
+conda install pytorch torchvision -c pytorch
+or with GPU
+conda install pytorch torchvision cudatoolkit=10.1 -c pytorch
+
+# Verificacion:
+import torch
+x = torch.rand(5, 3)
+print(x)
+
+torch.cuda.is_available()
